@@ -18,12 +18,14 @@
   <table border="1px">
     <thead>  
       <tr>
+        <th>#</th>
         <th>Nome</th>
         <th>Idade</th>
         <th>Curso</th>
       </tr>
     </thead>
     <tbody id="table">
+      <td>1</td>
       <td>Samuel</td>
       <td>23</td>
       <td>Computação</td>
@@ -33,24 +35,20 @@
   <section>
     <h2>Cadastro de Contatos</h2>
     <form id="formulario">
-      
-      <div>
-        <label for="campo-nome">Nome:</label>
-        <input id="campo-nome" type="text" placeholder="digite aqui...">
-      </div>
-
-      <div class="campo-idade">
-        <label for="campo-idade">Idade:</label>
-        <input id="campo-idade" type="text" placeholder="digite aqui...">
-      </div>
-
-      <div class="campo-curso">
-        <label for="campo-curso">Curso:</label>
-        <input id="campo-curso" onfocus="this.value=''" type="text" placeholder="digite aqui...">
-      </div>
-
-      
-      
+      <table>
+        <tr>
+          <td>Nome:</td>
+          <td><input id="campo-nome" type="text" placeholder="digite aqui..."></td>
+        </tr>
+        <tr>
+          <td>Idade:</td>
+          <td><input id="campo-idade" type="text" placeholder="digite aqui..."></td>
+        </tr>
+        <tr>
+          <td>Curso:</td>
+          <td><input id="campo-curso" type="text" placeholder="digite aqui..."></td>
+        </tr>
+      </table>      
     </form>
   </section>
 
