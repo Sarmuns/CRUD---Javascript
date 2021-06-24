@@ -1,3 +1,4 @@
+// aux = 2, pois já tem um contato na lista, ocupando o #1
 var aux = 2;
 
 function add(){
@@ -17,7 +18,7 @@ function add(){
   cellNome.innerHTML = nome;
   cellIdade.innerHTML = idade;
   cellCurso.innerHTML = curso;
-  aux = aux + 1;
+  aux += 1
 
   //Limpando o input
   document.getElementById('campo-nome').value = ''
