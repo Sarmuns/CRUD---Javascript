@@ -1,5 +1,3 @@
-// aux = 2, pois já tem um contato na lista, ocupando o #1
-
 // função para pegar os valores do formulario e limpa-lo
 function get(){
   var contatos = {
@@ -16,7 +14,7 @@ function get(){
 }
 
 function add(){
-
+// pegando dados do form
   contato = get();
 // cria uma row no formato correto
   var table = document.getElementById('table');
@@ -28,7 +26,6 @@ function add(){
   var cellCurso = row.insertCell(3)
   var cellEdit = row.insertCell(4)
   var cellDelete = row.insertCell(5)
-
 // setando valores coletados
   cellAux.innerHTML = lastRow;
   cellNome.innerHTML = contato.nome;
@@ -41,11 +38,9 @@ function add(){
 // função delete
 function del(el){
   el.parentElement.parentElement.remove();
-  
+// Atualizando valores do campo '#'
   var table = document.getElementById('table');
-  
   var i = 1;
-
   while (i < table.rows.length){
   table.rows[i].cells[0].innerHTML = i;
     i += 1;
