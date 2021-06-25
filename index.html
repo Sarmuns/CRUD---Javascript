@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Crud-JS</title>
 </head>
-
-
 <body>  
 <header>
-  <div class="container">
+  <div>
     <h1>CRUD JS</h1>
   </div>
 </header>
 
-<main class="container">
+<main>
 
-  <table border="1px">
-    <thead>  
+  <table id="table" border="1px">
+    <thead>
       <tr>
         <th>#</th>
         <th>Nome</th>
@@ -24,12 +22,18 @@
         <th>Curso</th>
       </tr>
     </thead>
-    <tbody id="table">
-      <td>1</td>
-      <td>Samuel</td>
-      <td>23</td>
-      <td>Computação</td>
+    
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Samuel</td>
+        <td>23</td>
+        <td>Computação</td>
+        <td><button onclick="edit(this)">Edit</button></td>
+        <td><button onclick="del(this)">Delete</button></td>
+      </tr>
     </tbody>
+
   </table>
  
   <section>
@@ -40,7 +44,7 @@
           <td>Nome:</td>
           <td><input id="campo-nome" type="text" placeholder="digite aqui..."></td>
         </tr>
-        <tr>
+          <tr>
           <td>Idade:</td>
           <td><input id="campo-idade" type="text" placeholder="digite aqui..."></td>
         </tr>
@@ -57,6 +61,7 @@
 <button onclick="add()">Add</button>
 
 </body>
+
 <script src="script.js"></script>
 
 </html>
