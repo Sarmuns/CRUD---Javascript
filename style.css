@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+}
+
+#table {
+    margin-left:auto;
+    margin-right:auto;
+    vertical-align: auto;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#table th{
+    height: 35px;
+    background-color: #F4BFD4;
+}
+
+#table tr{
+    background-color: white;
+}
+#table tr:nth-child(even) {
+    background-color: #ffecf4;
+    
+}
+
+#table tr:hover {
+    background-color: #e9d5dd;  
+}
+
+.edit{
+    background-color: #1fb833;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 4px;
+}
+
+.edit:hover{
+    background-color: #157e23;
+}
+
+.edit:active{
+    border:none;
+}
+
+.del{
+    background-color: #b81f1f;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 4px;
+}
+
+.del:hover{
+    background-color: #7e1515;
+}
+
+.del:active{
+    border:none;
+}
+
+#add{
+    background-color: #F4BFD4;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 40px;
+    color: black;
+    border-radius: 4px;
+}
+
+#add:hover{
+    background-color: #e9d5dd;
+}
+
+#add:active{
+    border:none;
+}
+
+input {
+    width: 60%;
+    height: 25px;
+  }
+
+.form{
+    font-size: 120%;
+}
