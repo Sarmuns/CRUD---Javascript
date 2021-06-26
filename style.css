@@ -1,34 +1,52 @@
-h1{
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+header {
     text-align: center;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    padding-bottom: 50px;
 }
 
 #table {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     vertical-align: auto;
     width: 80%;
     text-align: center;
     border-collapse: collapse;
 }
 
-#table th{
+#table th {
     height: 35px;
     background-color: #F4BFD4;
 }
 
-#table tr{
+#table tr {
     background-color: white;
 }
+
 #table tr:nth-child(even) {
     background-color: #ffecf4;
-    
 }
 
 #table tr:hover {
-    background-color: #e9d5dd;  
+    background-color: #e9d5dd;
 }
 
-.edit{
+.edit {
     background-color: #1fb833;
     border: 1px solid black;
     text-align: center;
@@ -38,15 +56,15 @@ h1{
     border-radius: 4px;
 }
 
-.edit:hover{
+.edit:hover {
     background-color: #157e23;
 }
 
-.edit:active{
-    border:none;
+.edit:active {
+    border: none;
 }
 
-.del{
+.del {
     background-color: #b81f1f;
     border: 1px solid black;
     text-align: center;
@@ -56,37 +74,52 @@ h1{
     border-radius: 4px;
 }
 
-.del:hover{
+.del:hover {
     background-color: #7e1515;
 }
 
-.del:active{
-    border:none;
+.del:active {
+    border: none;
 }
 
-#add{
+#add {
     background-color: #F4BFD4;
     border: 1px solid black;
     text-align: center;
-    display: inline-block;
-    padding: 10px 40px;
     color: black;
     border-radius: 4px;
+    margin-top: 10px;
+    align-self: left;
+    display: block;
+    height: 100%;
+    padding: 10px 40px;
 }
 
-#add:hover{
+#add:hover {
     background-color: #e9d5dd;
 }
 
-#add:active{
-    border:none;
+#add:active {
+    border: none;
+}
+
+.button_field {
+    width: 10px;
 }
 
 input {
     width: 60%;
     height: 25px;
-  }
+}
 
-.form{
-    font-size: 120%;
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding: 25px 0 0 50px;
+}
+
+.campo {
+    width: 100%;
 }
