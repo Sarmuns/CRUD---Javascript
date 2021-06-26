@@ -31,8 +31,8 @@ function add(){
   cellNome.innerHTML = contato.nome;
   cellIdade.innerHTML = contato.idade;
   cellCurso.innerHTML = contato.curso;
-  cellEdit.innerHTML = '<button onclick="edit(this)">Edit</button>';
-  cellDelete.innerHTML = '<button onclick="del(this)">Delete</button>';
+  cellEdit.innerHTML = '<button class="edit" onclick="edit(this)">Edit</button>';
+  cellDelete.innerHTML = '<button class="del" onclick="del(this)">Delete</button>';
 }
 
 // função delete
