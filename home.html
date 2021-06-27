@@ -8,67 +8,66 @@
 </head>
 
 <body>
-
-
-
     <main>
         <header>
             <div>
                 <h1>CRUD JS</h1>
             </div>
         </header>
+        <div class="wrap2">
+            <div class="wrap">
+                <div class="form">
+                    <div class="campo">
+                        <div>Nome:</div>
+                        <input id="campo-nome" type="text" placeholder="Digite seu nome...">
+                    </div>
+                    <div class="campo">
+                        <div>Idade:</div>
+                        <input id="campo-idade" type="number" min="1" placeholder="Digite sua idade...">
+                    </div>
+                    <div class="campo">
+                        <div>Curso:</div>
+                        <input id="campo-curso" type="text" placeholder="Digite seu curso...">
+                    </div>
+                    <button id="add" onclick="add()">Add</button>
 
+                </div>
 
-
-        <div class="form">
-            <div class="campo">
-                <div>Nome:</div>
-                <input id="campo-nome" type="text" placeholder="digite aqui...">
+                <div class="rules">
+                    <p id="title_rules">CRUD feito em javascript</p>
+                    <p><b>Adicionar</b>: preencha o formulario e clique em add <br><b>Editar:</b> preencha o formulario e clique na linha que quer editar<br> <b>Deletar:</b> clique no botão delete da linha que quer deletar</p>
+                    <p>A primeira linha não pode ser deletada pq é meu nome :)</p>
+                </div>
             </div>
-            <div class="campo">
-                <div>Idade:</div>
-                <input id="campo-idade" type="number" min="1" placeholder="digite aqui...">
-            </div>
-            <div class="campo">
-                <div>Curso:</div>
-                <input id="campo-curso" type="text" placeholder="digite aqui...">
-            </div>
-            <button id="add" onclick="add()">Add</button>
 
+            <h2>Tabela</h2>
+
+            <table id="table" border="1px">
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Curso</th>
+                        <th style="width: 1px;"></th>
+                        <th style="width: 1px;"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Samuel</td>
+                        <td>23</td>
+                        <td>Computação</td>
+                        <td><button class="edit" onclick="edit(this)" disabled>Edit</button></td>
+                        <td><button id="del" class="del" onclick="del(this)" disabled>Delete</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
         </div>
-
-
-        <h2>Tabela</h2>
-
-        <table id="table" border="1px">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Curso</th>
-                    <th style="width: 1px;"></th>
-                    <th style="width: 1px;"></th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Samuel</td>
-                    <td>23</td>
-                    <td>Computação</td>
-                    <td><button class="edit" onclick="edit(this)">Edit</button></td>
-                    <td><button class="del" onclick="del(this)">Delete</button></td>
-                </tr>
-            </tbody>
-
-        </table>
-
-
-
-
-
     </main>
 
 

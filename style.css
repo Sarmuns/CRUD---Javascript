@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap');
+h2 {
+    text-align: center;
+}
+
 body {
     background-color: rgb(238, 238, 238);
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 header {
@@ -13,18 +19,17 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
-    padding-bottom: 50px;
+    padding: 0 0 50px 0;
 }
 
 #table {
     margin-left: auto;
     margin-right: auto;
     vertical-align: auto;
-    width: 80%;
+    width: 100%;
     text-align: center;
     border-collapse: collapse;
 }
@@ -39,18 +44,21 @@ main {
 }
 
 #table tr:nth-child(even) {
-    background-color: #ffecf4;
+    background-color: #ffe2ee;
 }
 
 #table tr:hover {
     background-color: #e9d5dd;
 }
 
+button {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
 .edit {
     background-color: #1fb833;
     border: 1px solid black;
     text-align: center;
-    display: inline-block;
     padding: 10px 40px;
     color: white;
     border-radius: 4px;
@@ -64,11 +72,15 @@ main {
     border: none;
 }
 
+.edit:disabled {
+    color: #ccc;
+    background-color: #1b8529;
+}
+
 .del {
     background-color: #b81f1f;
     border: 1px solid black;
     text-align: center;
-    display: inline-block;
     padding: 10px 40px;
     color: white;
     border-radius: 4px;
@@ -78,8 +90,17 @@ main {
     background-color: #7e1515;
 }
 
+#del:hover {
+    background-color: #b65656;
+}
+
 .del:active {
     border: none;
+}
+
+.del:disabled {
+    background-color: #b65656;
+    color: #ccc;
 }
 
 #add {
@@ -89,10 +110,8 @@ main {
     color: black;
     border-radius: 4px;
     margin-top: 10px;
-    align-self: left;
-    display: block;
-    height: 100%;
-    padding: 10px 40px;
+    padding: 10px 0 10px 0;
+    width: 15%;
 }
 
 #add:hover {
@@ -108,18 +127,77 @@ main {
 }
 
 input {
-    width: 60%;
+    width: 70%;
     height: 25px;
+    margin: 5px 0 15px 0;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: flex-start;
-    padding: 25px 0 0 50px;
+    width: 60%;
 }
 
 .campo {
-    width: 100%;
+    font-weight: bold;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.rules {
+    background-color: rgb(238, 238, 238);
+    margin: 20px 0 20px 0;
+    padding: 0 10px 0 10px;
+    border-radius: 4px;
+}
+
+.rules:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.wrap2 {
+    padding: 40px 40px 0 40px;
+}
+
+#title_rules {
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+}
+
+@media only screen and (max-width: 992px) {
+    .wrap {
+        flex-direction: column-reverse;
+    }
+    .form {
+        width: 100%;
+    }
+    input {
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        background-color: rgb(238, 238, 238);
+    }
+    .rules {
+        height: 40%;
+        text-align: center;
+    }
+    .campo {
+        text-align: center;
+    }
+    .campo div {
+        display: none;
+    }
+    #add {
+        align-self: center;
+        width: 50%;
+        border-radius: 12px;
+    }
 }
