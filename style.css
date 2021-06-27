@@ -14,6 +14,8 @@ header {
     background-color: rgb(238, 238, 238);
     width: 100%;
     border-radius: 4px;
+    position: sticky;
+    top: 0;
 }
 
 main {
