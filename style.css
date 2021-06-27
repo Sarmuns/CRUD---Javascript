@@ -90,10 +90,6 @@ button {
     background-color: #7e1515;
 }
 
-#del:hover {
-    background-color: #b65656;
-}
-
 .del:active {
     border: none;
 }
