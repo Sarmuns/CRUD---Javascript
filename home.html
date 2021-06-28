@@ -19,15 +19,15 @@
                 <div class="form">
                     <div class="campo">
                         <div>Nome:</div>
-                        <input id="campo-nome" type="text" maxlength="20" placeholder="Digite seu nome...">
+                        <input id="campo-nome" type="text" onkeyup="validation()" maxlength="20" placeholder="Digite seu nome...">
                     </div>
                     <div class="campo">
                         <div>Idade:</div>
-                        <input id="campo-idade" type="number" min="1" placeholder="Digite sua idade...">
+                        <input id="campo-idade" type="number" placeholder="Digite sua idade...">
                     </div>
                     <div class="campo">
                         <div>Curso:</div>
-                        <input id="campo-curso" type="text" placeholder="Digite seu curso...">
+                        <input id="campo-curso" type="text" onkeyup="validation()" maxlength="30" placeholder="Digite seu curso...">
                     </div>
                     <button id="add" onclick="add()">Add</button>
 

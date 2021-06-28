@@ -6,17 +6,35 @@ function get() {
         curso: document.getElementById('campo-curso').value
     }
 
+    return contatos;
+}
+
+function resetForm() {
     document.getElementById('campo-nome').value = ''
     document.getElementById('campo-idade').value = ''
     document.getElementById('campo-curso').value = ''
+}
 
-    return contatos;
+function validation() {
+    document.getElementById('campo-nome').value = document.getElementById('campo-nome').value.replace(/[^A-zÀ-ú|\s )]/, '');
+    document.getElementById('campo-curso').value = document.getElementById('campo-curso').value.replace(/[^A-zÀ-ú|\s]/, '');
+
 }
 
 function add() {
     // pegando dados do form
     contato = get();
     // cria uma row
+    if (document.getElementById('campo-nome').value == '') {
+        alert('Digite seu nome')
+        return;
+    } else if (document.getElementById('campo-idade').value == '') {
+        alert('Digite seu idade')
+        return;
+    } else if (document.getElementById('campo-curso').value == '') {
+        alert('Digite seu curso')
+        return;
+    }
     var table = document.getElementById('table');
     var lastRow = table.rows.length;
     var row = table.insertRow()
@@ -34,8 +52,9 @@ function add() {
     cellCurso.innerHTML = contato.curso;
     cellEdit.innerHTML = '<button class="edit" onclick="edit(this)">Edit</button>';
     cellDelete.innerHTML = '<button class="del" onclick="del(this)">Delete</button>';
-}
+    resetForm();
 
+}
 // função delete
 function del(el) {
     el.parentElement.parentElement.remove();
