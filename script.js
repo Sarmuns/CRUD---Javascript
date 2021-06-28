@@ -16,8 +16,8 @@ function resetForm() {
 }
 
 function validation() {
-    document.getElementById('campo-nome').value = document.getElementById('campo-nome').value.replace(/[^A-zÀ-ú|\s )]/, '');
-    document.getElementById('campo-curso').value = document.getElementById('campo-curso').value.replace(/[^A-zÀ-ú|\s]/, '');
+    document.getElementById('campo-nome').value = document.getElementById('campo-nome').value.replace(/[^a-záàâãéèêíïóôõöúçñ ]+$/i, '');
+    document.getElementById('campo-curso').value = document.getElementById('campo-curso').value.replace(/[^a-záàâãéèêíïóôõöúçñ ]+$/i, '');
 
 }
 
