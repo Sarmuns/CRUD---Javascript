@@ -19,15 +19,15 @@
                 <div class="form">
                     <div class="campo">
                         <div>Nome:</div>
-                        <input id="campo-nome" type="text" onkeyup="validation()" maxlength="20" placeholder="Digite seu nome...">
+                        <input id="campo-nome" type="text" onkeyup="validationOnKey()" maxlength="20" placeholder="Digite seu nome...">
                     </div>
                     <div class="campo">
                         <div>Idade:</div>
-                        <input id="campo-idade" type="number" placeholder="Digite sua idade...">
+                        <input id="campo-idade" min="1" type="number" placeholder="Digite sua idade...">
                     </div>
                     <div class="campo">
                         <div>Curso:</div>
-                        <input id="campo-curso" type="text" onkeyup="validation()" maxlength="30" placeholder="Digite seu curso...">
+                        <input id="campo-curso" type="text" onkeyup="validationOnKey()" maxlength="30" placeholder="Digite seu curso...">
                     </div>
                     <button id="add" onclick="add()">Add</button>
 
@@ -35,7 +35,7 @@
 
                 <div class="rules">
                     <p id="title_rules">CRUD feito em javascript</p>
-                    <p><b>Adicionar</b>: preencha o formulario e clique em add <br><b>Editar:</b> preencha o formulario e clique na linha que quer editar<br> <b>Deletar:</b> clique no botão delete da linha que quer deletar</p>
+                    <p><b>Adicionar</b>: preencha o formulario e clique em add <br><b>Editar:</b> preencha o formulario e clique em editar na linha que quer editar<br> <b>Deletar:</b> clique no botão delete da linha que quer deletar</p>
                     <p>A primeira linha não pode ser deletada nem editada pq é meu nome :)</p>
                 </div>
             </div>

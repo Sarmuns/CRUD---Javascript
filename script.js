@@ -1,5 +1,6 @@
 // função para pegar os valores do formulario e limpa-lo
 function get() {
+
     var contatos = {
         nome: document.getElementById('campo-nome').value,
         idade: document.getElementById('campo-idade').value,
@@ -15,26 +16,44 @@ function resetForm() {
     document.getElementById('campo-curso').value = ''
 }
 
-function validation() {
+function validationOnKey() {
     document.getElementById('campo-nome').value = document.getElementById('campo-nome').value.replace(/[^a-záàâãéèêíïóôõöúçñ ]+$/i, '');
     document.getElementById('campo-curso').value = document.getElementById('campo-curso').value.replace(/[^a-záàâãéèêíïóôõöúçñ ]+$/i, '');
+}
 
+function validation() {
+    // uma forma de validação para campos vazios, números negativos e números decimais
+    if (document.getElementById('campo-nome').value == '') {
+        alert('Digite seu nome')
+        return (false);
+    } else if (document.getElementById('campo-idade').value == '') {
+        alert('Digite sua idade')
+        return (false);
+    } else if (document.getElementById('campo-curso').value == '') {
+        alert('Digite seu curso')
+        return (false);
+    } else if (document.getElementById('campo-idade').value < 1) {
+        alert('Digite uma idade de verdade :)')
+        document.getElementById('campo-idade').value = ''
+        return (false);
+        // + antes de contato.idade é só pra ler como número e não como string
+        // pra poder checar se é um número inteiro
+    } else if ((Number.isInteger(+contato.idade)) != (true)) {
+        alert('Idade com número decimal?')
+        document.getElementById('campo-idade').value = parseInt(contato.idade, 10);
+        return (false);
+    }
 }
 
 function add() {
     // pegando dados do form
     contato = get();
+    console.log(contato.nome, contato.idade, contato.curso)
+
+    if (validation() == false)
+        return
+
     // cria uma row
-    if (document.getElementById('campo-nome').value == '') {
-        alert('Digite seu nome')
-        return;
-    } else if (document.getElementById('campo-idade').value == '') {
-        alert('Digite seu idade')
-        return;
-    } else if (document.getElementById('campo-curso').value == '') {
-        alert('Digite seu curso')
-        return;
-    }
     var table = document.getElementById('table');
     var lastRow = table.rows.length;
     var row = table.insertRow()
@@ -70,9 +89,13 @@ function del(el) {
 function edit(el) {
     // pegando dados novos do form
     contato = get();
-    // setando dados novos
+    if (validation() == false)
+        return
+        // setando dados novos
     var cells = el.parentElement.parentElement.cells;
     cells[1].textContent = contato.nome;
     cells[2].textContent = contato.idade;
     cells[3].textContent = contato.curso;
+
+    resetForm();
 }
